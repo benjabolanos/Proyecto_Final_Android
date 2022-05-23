@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         {
             override fun getHeaders(): MutableMap<String, String> {
                 val headers = HashMap<String, String>()
-                headers["X-Riot-Token"] = "RGAPI-d1ce42f7-2815-4a37-885c-ed774efb2687"
+                headers["X-Riot-Token"] = "RGAPI-a622c28b-0a79-496d-a64c-2be2f331d357"
                 return headers
             }
         }
@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         {
             override fun getHeaders(): MutableMap<String, String> {
                 val headers = HashMap<String, String>()
-                headers["X-Riot-Token"] = "RGAPI-d1ce42f7-2815-4a37-885c-ed774efb2687"
+                headers["X-Riot-Token"] = "RGAPI-a622c28b-0a79-496d-a64c-2be2f331d357"
                 return headers
             }
         }
@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity() {
                 }) {
                 override fun getHeaders(): MutableMap<String, String> {
                     val headers = HashMap<String, String>()
-                    headers["X-Riot-Token"] = "RGAPI-d1ce42f7-2815-4a37-885c-ed774efb2687"
+                    headers["X-Riot-Token"] = "RGAPI-a622c28b-0a79-496d-a64c-2be2f331d357"
                     return headers
                 }
             }
