@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".PlayerProfile">
 
+    <View
+        android:id="@+id/winner"
+        android:layout_width="88dp"
+        android:layout_height="135dp"
+        android:layout_marginEnd="360dp"
+        android:background="@drawable/match_winner_rectangle"
+        android:backgroundTint="@color/rojo_derrota"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
     <ImageView
         android:id="@+id/player_profile_summoner_icon"
         android:layout_width="100dp"
@@ -36,16 +48,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <ImageView
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/player_profile_match_champion_icon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.327"
+        app:shapeAppearanceOverlay="@style/champion_icon_shape"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView

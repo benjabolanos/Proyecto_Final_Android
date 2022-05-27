@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="azul_victoria">#1C2023</color>
+    <color name="azul_victoria">#169FFF</color>
+    <color name="rojo_derrota">#F54545</color>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.*
 import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.*
+import com.google.android.material.imageview.ShapeableImageView
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import org.json.JSONArray
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         {
             override fun getHeaders(): MutableMap<String, String> {
                 val headers = HashMap<String, String>()
-                headers["X-Riot-Token"] = "RGAPI-a622c28b-0a79-496d-a64c-2be2f331d357"
+                headers["X-Riot-Token"] = "RGAPI-300b9d39-fa24-45c2-a157-91d012029c1a"
                 return headers
             }
         }
@@ -87,7 +88,7 @@ class MainActivity : AppCompatActivity() {
         {
             override fun getHeaders(): MutableMap<String, String> {
                 val headers = HashMap<String, String>()
-                headers["X-Riot-Token"] = "RGAPI-a622c28b-0a79-496d-a64c-2be2f331d357"
+                headers["X-Riot-Token"] = "RGAPI-300b9d39-fa24-45c2-a157-91d012029c1a"
                 return headers
             }
         }
@@ -121,7 +122,7 @@ class MainActivity : AppCompatActivity() {
                 }) {
                 override fun getHeaders(): MutableMap<String, String> {
                     val headers = HashMap<String, String>()
-                    headers["X-Riot-Token"] = "RGAPI-a622c28b-0a79-496d-a64c-2be2f331d357"
+                    headers["X-Riot-Token"] = "RGAPI-300b9d39-fa24-45c2-a157-91d012029c1a"
                     return headers
                 }
             }
@@ -152,9 +153,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getIcon(iconID:Int){
-        val iconView = findViewById<ImageView>(R.id.player_icon)
+        val iconView = findViewById<ShapeableImageView>(R.id.player_icon)
         val imageRequest = ImageRequest("$iconURL$iconID.png", {bitmap ->
             iconView.setImageBitmap(bitmap)
+            //iconView.
         }, 0, 0, ImageView.ScaleType.CENTER_CROP, Bitmap.Config.ARGB_8888,
             { _ -> })
         queue.add(imageRequest)
