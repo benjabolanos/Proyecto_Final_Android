@@ -11,8 +11,8 @@ import com.android.volley.Response
 import com.android.volley.toolbox.*
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.gson.Gson
-import com.google.gson.JsonArray
 import org.json.JSONArray
+import uabc.ic.benjaminbolanos.proyectofinalandroid.api.Summoner
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,24 +45,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun searchPlayer(summonerName:String){
-
-        val stringRequst = object: StringRequest(Method.GET, summonerURL+summonerName,
+        val newUrl = "https://la1.api.riotgames.com/lol/summoner/v4/summoners/by-name/swertyvortex"
+        val stringRequst = object: StringRequest(Method.GET, newUrl,
             Response.Listener { response ->
                 response.trimIndent()
                 val gson = Gson()
                 summoner = gson.fromJson(response, Summoner::class.java)
-                playerNameText.text = summoner.name
-                summoner.profileIconId?.let { getIcon(it) }
-                summoner.puuid?.let { getGameID(it) }
-                profileIntent.putExtra("summonerIconID", summoner.profileIconId)
-                profileIntent.putExtra("summonerName", summoner.name)
-                profileIntent.putExtra("summonerLevel", summoner.summonerLevel)
+
+                summoner.puuid?.let { MatchListCreator(it, applicationContext) }
+                //playerNameText.text = summoner.name
+                //summoner.profileIconId?.let { getIcon(it) }
+                //summoner.puuid?.let { getGameID(it) }
+                //profileIntent.putExtra("summonerIconID", summoner.profileIconId)
+                //profileIntent.putExtra("summonerName", summoner.name)
+                //profileIntent.putExtra("summonerLevel", summoner.summonerLevel)
             },
             Response.ErrorListener {  })
         {
             override fun getHeaders(): MutableMap<String, String> {
                 val headers = HashMap<String, String>()
-                headers["X-Riot-Token"] = "RGAPI-300b9d39-fa24-45c2-a157-91d012029c1a"
+                headers["X-Riot-Token"] = "RGAPI-83f6d7db-b986-4236-9814-af48b9705bbe"
                 return headers
             }
         }
@@ -101,6 +103,8 @@ class MainActivity : AppCompatActivity() {
             val gameURL = "https://americas.api.riotgames.com/lol/match/v5/matches/$gameID"
             val jsonRequest = object :
                 JsonObjectRequest(Method.GET, gameURL, null, Response.Listener { response ->
+
+
                     val gameInfo = response.getJSONObject("info")
                     val gameMetaParticipants = response
                                             .getJSONObject("metadata")
