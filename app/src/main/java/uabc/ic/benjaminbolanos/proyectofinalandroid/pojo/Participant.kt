@@ -1,4 +1,4 @@
-package uabc.ic.benjaminbolanos.proyectofinalandroid.api
+package uabc.ic.benjaminbolanos.proyectofinalandroid.pojo
 
 import com.google.gson.annotations.SerializedName
 

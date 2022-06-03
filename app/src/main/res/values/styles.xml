@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="champion_icon_shape" parent="" >
+    <style name="rounded_icon_shape" parent="" >
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="rounded_rectangle_icon_shape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15%</item>
     </style>
 
 </resources>

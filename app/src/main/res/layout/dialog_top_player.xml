@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="292dp"
+    android:layout_height="320dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dorado1"
+    android:backgroundTint="@color/dorado1"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/gris2">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/dialog_player_icon_frame"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:background="@color/azul_victoria"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_player_icon"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_player_icon"
+            app:layout_constraintStart_toStartOf="@+id/dialog_player_icon"
+            app:layout_constraintTop_toTopOf="@+id/dialog_player_icon"
+            app:shapeAppearanceOverlay="@style/rounded_rectangle_icon_shape"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/dialog_player_icon"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            app:layout_constraintVertical_bias="0.1"
+            android:background="@color/rojo_derrota"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/rounded_rectangle_icon_shape"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="192dp"
+            android:layout_height="128dp"
+            android:background="@drawable/challenger_emblem"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_player_icon"
+            app:layout_constraintStart_toStartOf="@+id/dialog_player_icon"
+            app:layout_constraintTop_toTopOf="@+id/dialog_player_icon"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_player_button"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dorado1"
+            android:fontFamily="@font/mulish_black"
+            android:text="Ir a su perfil"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornerRadius="1000dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <TextView
+            android:id="@+id/dialog_player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_black"
+            android:text="NombreWoow"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.76" />
+
+        <TextView
+            android:id="@+id/dialog_player_level"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/hexagon_shape"
+            android:backgroundTint="@color/azul_victoria"
+            android:fontFamily="@font/mulish_black"
+            android:gravity="center"
+            android:text="000"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_player_icon"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_player_icon"
+            app:layout_constraintStart_toStartOf="@+id/dialog_player_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

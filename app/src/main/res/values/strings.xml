@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Proyecto Final Android</string>
+
+    <string name="creditos">Programación de Dispositivos Moviles\nProyecto Final\nBenjamin Bolaños Garrido</string>
+    <string name="titulo_1">Aplicación\nconectada a API de</string>
+    <string name="lol">LEAGUE OF\nLEGENDS</string>
+    
 </resources>

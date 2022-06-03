@@ -4,12 +4,10 @@ import android.content.Context
 import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
-import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
-import uabc.ic.benjaminbolanos.proyectofinalandroid.api.Match
-import uabc.ic.benjaminbolanos.proyectofinalandroid.api.ext
+import uabc.ic.benjaminbolanos.proyectofinalandroid.pojo.Match
 import java.lang.Exception
 
 class MatchListCreator(private val playerUUID: String, val context: Context) {
@@ -58,7 +56,6 @@ class MatchListCreator(private val playerUUID: String, val context: Context) {
             response.trimIndent()
             val gson = Gson()
             val match = gson.fromJson(response, Match::class.java)
-            ext.matchList.add(match)
         }, Response.ErrorListener { error ->
                 error.printStackTrace()
         })
